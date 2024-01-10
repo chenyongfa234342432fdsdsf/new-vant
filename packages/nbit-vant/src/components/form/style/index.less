@@ -1,0 +1,63 @@
+@import './var.less';
+
+.@{rv-prefix}-form {
+  .rv-field__control-wrapper {
+    input {
+      padding: 0 12px;
+      height: 20px;
+      line-height: 1;
+      background: var(--nc-11);
+      border-radius: 4px;
+      color: var(--nc-01);
+    }
+  }
+
+  &-item {
+    &--vertical {
+      flex-wrap: wrap;
+      .@{rv-prefix}-field__label {
+        margin-bottom: 8 * @hd;
+        width: 100%;
+        flex: none;
+      }
+
+      .rv-field__right-icon,
+      .rv-field__suffix {
+        position: absolute;
+      }
+
+      .rv-field__right-icon {
+        top: 16px;
+        right: 12px;
+      }
+
+      .rv-field__prefix {
+        padding-left: 12px;
+      }
+
+      .rv-field__suffix {
+        top: 12px;
+        right: 0;
+      }
+
+      .rv-field__control-wrapper {
+        input {
+          padding: 0 12px;
+          height: 46px;
+          line-height: 1;
+          background: var(--nc-11);
+          border-radius: 4px;
+          color: var(--nc-01);
+        }
+      }
+
+      .rv-field--error {
+        .rv-field__control-wrapper {
+          input {
+            border: 1px solid var(--rd-05);
+          }
+        }
+      }
+    }
+  }
+}
